@@ -20,6 +20,6 @@ Application was created by Create React App
 
 `$ yarn test`
 
-#### Make a build for production
+### Make a build for production
 
 `$ yarn build`
