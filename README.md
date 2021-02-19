@@ -8,8 +8,6 @@ Application was created by Create React App
 
 ## Let's get start
 
----
-
 ### Install dependencies
 
 `$ yarn install`
