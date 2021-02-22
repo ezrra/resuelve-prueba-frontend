@@ -1,0 +1,24 @@
+.Film-content {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.Film-image {
+  max-width: 200px;
+  min-width: 50px;
+}
+
+.Film-title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 10px 0 0 0;
+}
+
+.Film-director {
+  color: #7f8c8d;
+  font-size: 16px;
+  font-weight: 200;
+  margin: 5px 0 0 0;
+}
