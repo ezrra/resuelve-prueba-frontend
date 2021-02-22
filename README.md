@@ -1,25 +1,23 @@
-# Challenge "Prueba frontend"
+# Prueba frontend
 
-Application was created by Create React App
+Esta aplicación fue creada con la herramienta [Create React App](https://create-react-app.dev/).
 
-## Install package manager
+## Instalar administrador de paquetes.
 
 - [yarn](https://yarnpkg.com/)
 
-## Let's get start
-
-### Install dependencies
+### Instalar dependencias.
 
 `$ yarn install`
 
-### Runs the application in development mode
+### Ejecutar modo desarrollo la aplicación.
 
 `$ yarn start`
 
-### Run tests
+### Ejecutar pruebas.
 
 `$ yarn test`
 
-### Make a build for production
+### Crear archivos para producción.
 
 `$ yarn build`
