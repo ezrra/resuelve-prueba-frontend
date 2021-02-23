@@ -4,16 +4,16 @@ import i18n from '../../i18n';
 
 const SearchField = ({ suggestions }) => {
   const [search, setSearch] = useState('');
-  // const [filteredSuggestions, setFilteredSuggestions] = useState([]);
+  const [filteredSuggestions, setFilteredSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
 
   const Suggestions = () => {
-    if (!showSuggestions) {
+    if (!showSuggestions || suggestions.length === 0) {
       return null;
     }
 
     return (
-      suggestions.map((suggestion, key) => <div key={key}>{suggestion}</div>)
+      filteredSuggestions.map((suggestion, key) => <div key={key}>{suggestion}</div>)
     )
   }
 
@@ -21,18 +21,24 @@ const SearchField = ({ suggestions }) => {
     event.preventDefault();
   };
 
-  const handleChangeSearch = (event) => {
-    const text = event.target.value;
+  const handleChange = (event) => {
+    const textInput = event.target.value;
 
-    setShowSuggestions(text.length > 0);
+    setShowSuggestions(textInput.length > 0);
+
     setSearch(event.target.value);
+
+    const filteredSuggestions =
+      suggestions.filter(suggestion => new RegExp(textInput, 'i').test(suggestion));
+
+    setFilteredSuggestions(filteredSuggestions);
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <input
         className="Search-field"
-        onChange={handleChangeSearch}
+        onChange={handleChange}
         placeholder={i18n.searchField.search}
         value={search}
       />
