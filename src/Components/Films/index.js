@@ -1,6 +1,7 @@
 import React from 'react';
 import './Films.css';
 import Film from '../Film';
+import i18n from '../../i18n';
 
 const Films = ({ films, loading }) => {
   const Data = () => {
@@ -9,7 +10,7 @@ const Films = ({ films, loading }) => {
     }
 
     if (films.length === 0) {
-      return <div>No se encontraron peliculas</div>;
+      return <div>{i18n.films.noRecords}</div>;
     }
 
     return (
