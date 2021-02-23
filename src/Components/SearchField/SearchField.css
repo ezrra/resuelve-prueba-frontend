@@ -1,0 +1,9 @@
+.Search-field {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  min-width: 300px;
+}
+
+.Search-field:focus {
+  outline: none;
+}
