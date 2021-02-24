@@ -18,11 +18,14 @@ const Films = () => {
       const { error, data } = await getFilms();
 
       if (error) {
-        setError('Error')
+        setError(error);
       }
 
-      setFilms(data);
-      setSuggestions(data.map((film) => film.title));
+      if (data && data.length) {
+        setFilms(data);
+        setSuggestions(data.map((film) => film.title));
+      }
+
       setLoading(false)
     })();
   }, []);
