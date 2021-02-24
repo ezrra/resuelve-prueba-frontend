@@ -11,13 +11,16 @@
   margin-top: 0;
   position: absolute;
   background-color: #fff;
-  padding: 10px 10px 0px;
+  padding: 10px;
   list-style-type: none;
   min-width: 325px;
 }
 
 .Suggestion-list li {
-  margin-bottom: 10px;
-  padding-bottom: 2px;
+  padding: 5px;
   border-bottom: 1px solid #aaa;
+}
+
+.Suggestion-list li:hover {
+  background-color: #ccc;
 }

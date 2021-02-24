@@ -8,14 +8,19 @@ const SearchField = ({ suggestions }) => {
   const [showSuggestions, setShowSuggestions] = useState(false);
 
   const Suggestions = () => {
-    if (!showSuggestions || suggestions.length === 0) {
+    const handleSuggestionSelected = (e) => {
+      setShowSuggestions(false);
+      setSearch(e.currentTarget.innerText);
+    }
+
+    if (!showSuggestions || suggestions.length === 0 || filteredSuggestions.length === 0) {
       return null;
     }
 
     return (
       <ul className="Suggestion-list">
         {filteredSuggestions.map((suggestion, key) => (
-          <li key={key}>{suggestion}</li>
+          <li onClick={handleSuggestionSelected} key={key}>{suggestion}</li>
         ))}
       </ul>
     );
