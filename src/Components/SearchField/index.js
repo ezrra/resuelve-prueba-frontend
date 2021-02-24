@@ -13,8 +13,12 @@ const SearchField = ({ suggestions }) => {
     }
 
     return (
-      filteredSuggestions.map((suggestion, key) => <div key={key}>{suggestion}</div>)
-    )
+      <ul className="Suggestion-list">
+        {filteredSuggestions.map((suggestion, key) => (
+          <li key={key}>{suggestion}</li>
+        ))}
+      </ul>
+    );
   }
 
   const handleSubmit = (event) => {

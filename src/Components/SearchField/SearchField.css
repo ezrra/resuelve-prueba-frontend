@@ -1,9 +1,23 @@
 .Search-field {
-  margin-bottom: 20px;
   padding: 10px 20px;
   min-width: 300px;
 }
 
 .Search-field:focus {
   outline: none;
+}
+
+.Suggestion-list {
+  margin-top: 0;
+  position: absolute;
+  background-color: #fff;
+  padding: 10px 10px 0px;
+  list-style-type: none;
+  min-width: 325px;
+}
+
+.Suggestion-list li {
+  margin-bottom: 10px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #aaa;
 }
