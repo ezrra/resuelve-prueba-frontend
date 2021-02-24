@@ -21,6 +21,6 @@
   border-bottom: 1px solid #aaa;
 }
 
-.Suggestion-list li:hover {
+.Suggestion-list li:hover, .Suggestion-active {
   background-color: #ccc;
 }
