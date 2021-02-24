@@ -51,6 +51,10 @@ const SearchField = ({ suggestions }) => {
   };
 
   const handleKeyDown = (event) => {
+    if (!showSuggestions) {
+      return false;
+    }
+
     if (event.keyCode === PRESS_DOWN_CODE
       && activeSuggestion !== filteredSuggestions.length) {
       setActiveSuggestion(activeSuggestion + 1);
