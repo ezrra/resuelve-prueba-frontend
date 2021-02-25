@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import './SearchField.css';
 import i18n from '../../i18n';
-import { filterArrayByText } from '../utils';
+import { filterArrayByText } from '../../utils';
 
 const PRESS_ENTER_CODE = 13;
 const PRESS_DOWN_CODE = 40;
 const PRESS_UP_CODE = 38;
+const PRESS_ESCAPE = 27;
 
-const SearchField = ({ suggestions }) => {
+const SearchField = ({ suggestions, handleSearch, loading }) => {
   const [search, setSearch] = useState('');
   const [filteredSuggestions, setFilteredSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -47,12 +48,18 @@ const SearchField = ({ suggestions }) => {
   };
 
   const handleSubmit = (event) => {
+    handleSearch(search);
+
     event.preventDefault();
   };
 
   const handleKeyDown = (event) => {
     if (!showSuggestions) {
       return false;
+    }
+
+    if (event.keyCode === PRESS_ESCAPE) {
+      setShowSuggestions(false);
     }
 
     if (event.keyCode === PRESS_DOWN_CODE
@@ -91,6 +98,7 @@ const SearchField = ({ suggestions }) => {
   return (
     <form onSubmit={handleSubmit}>
       <input
+        disabled={loading}
         onKeyDown={handleKeyDown}
         className="Search-field"
         onChange={handleChange}
