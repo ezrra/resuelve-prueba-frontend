@@ -25,8 +25,12 @@ const Films = ({ films, loading }) => {
       films.map((film, key) => <Film key={key} film={film} />)
     )
   }
+
   return (
     <div className="List-content">
+      <div className="Results-content">
+        <span>{i18n.films.results}: {films.length}</span>
+      </div>
       <Data />
     </div>
   )
