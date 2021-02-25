@@ -5,7 +5,7 @@ import Error from '../../Components/Error/Error';
 import { getFilms } from '../../service';
 import SearchField from '../../Components/SearchField';
 import i18n from '../../i18n';
-import { filterArrayObjectByText } from '../../utils';
+import { filterObjectArrayByText } from '../../utils';
 
 const Films = () => {
   const [error, setError] = useState('');
@@ -21,7 +21,7 @@ const Films = () => {
       return false;
     }
 
-    const filteredFilms = filterArrayObjectByText({
+    const filteredFilms = filterObjectArrayByText({
       text: search,
       array: films,
       property: 'title',

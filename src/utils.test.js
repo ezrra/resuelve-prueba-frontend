@@ -19,3 +19,13 @@ it("return two o more fruits", () => {
 
   expect(result.length).toBeGreaterThanOrEqual(EXPECT_GREATER_THAN);
 });
+
+it("return zero results", () => {
+  const array = ['apple', 'banana', 'cherry', 'orange', 'pear'];
+  const text = 'mango';
+
+  const result = filterArrayByText({ array, text });
+  const EXPECT_COUNT = 0;
+
+  expect(result.length).toBe(EXPECT_COUNT);
+});
