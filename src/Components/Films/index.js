@@ -3,10 +3,18 @@ import './Films.css';
 import Film from '../Film';
 import i18n from '../../i18n';
 
+const SHIMMER_FILMS_COUNT = 5;
+
 const Films = ({ films, loading }) => {
   const Data = () => {
     if (loading) {
-      return null;
+      let shimmerList = [];
+
+      for (let count = 0; count < SHIMMER_FILMS_COUNT; count++) {
+        shimmerList.push(<Film key={count} showShimmer />);
+      }
+
+      return shimmerList;
     }
 
     if (films.length === 0) {
