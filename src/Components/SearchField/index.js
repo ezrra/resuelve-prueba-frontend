@@ -18,6 +18,7 @@ const SearchField = ({ suggestions, handleSearch, loading }) => {
     const handleSuggestionSelected = (event) => {
       setShowSuggestions(false);
       setSearch(event.currentTarget.innerText);
+      handleSearch(event.currentTarget.innerText)
     }
 
     if (!showSuggestions || suggestions.length === 0 || filteredSuggestions.length === 0) {
