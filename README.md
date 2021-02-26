@@ -6,11 +6,31 @@ Esta aplicación fue creada con la herramienta [Create React App](https://create
 
 El proyecto tiene como objetivo los siguientes puntos:
 
-- Mostrara un listado de peliculas.
-- Busqueda de peliculas.
-- Autocompletado al momento de realizar una busqueda.
+- Mostrar un listado de películas.
+- Busqueda de películas.
+- Autocompletado al momento de realizar una búsqueda.
 
-## Información para el desarrollador
+## Arquitectura del proyecto
+
+División por componentes.
+
+- Creación de componentes por carpeta.
+Se agrego estilo por componente.
+
+- Creación de una pantalla (Screen).
+Se agrego estilo en esa pantalla.
+
+## ¿Qué pudiera mejorar en el código del proyecto?
+
+- Utilizar [redux](https://react-redux.js.org/) para el manejo de almacenamiento.
+
+## Parte del código que me siento orgulloso
+
+`src/Components/SearchField/index.js`.
+
+## Aplicación en vivo
+
+[Films app](https://resuelve-prueba-frontend.herokuapp.com/)
 
 ## Ejecución del proyecto
 
