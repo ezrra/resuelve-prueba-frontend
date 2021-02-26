@@ -8,11 +8,15 @@ const PRESS_DOWN_CODE = 40;
 const PRESS_UP_CODE = 38;
 const PRESS_ESCAPE = 27;
 
-const SearchField = ({ suggestions, handleSearch, loading }) => {
+const SearchField = ({ suggestions, handleSearch, loading, error }) => {
   const [search, setSearch] = useState('');
   const [filteredSuggestions, setFilteredSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [activeSuggestion, setActiveSuggestion] = useState(0);
+
+  if (error) {
+    return null;
+  }
 
   const Suggestions = () => {
     const handleSuggestionSelected = (event) => {

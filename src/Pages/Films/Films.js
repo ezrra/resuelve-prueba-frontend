@@ -55,7 +55,12 @@ const Films = () => {
     <>
       <Title title={i18n.films.title} />
       <Error text={error} />
-      <SearchField loading={loading} suggestions={suggestions} handleSearch={searchFilms} />
+      <SearchField
+        error={error}
+        loading={loading}
+        suggestions={suggestions}
+        handleSearch={searchFilms}
+      />
       <FilmList loading={loading} films={filteredFilms} />
     </>
   )

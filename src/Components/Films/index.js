@@ -17,10 +17,6 @@ const Films = ({ films, loading }) => {
       return shimmerList;
     }
 
-    if (films.length === 0) {
-      return <div>{i18n.films.noRecords}</div>;
-    }
-
     return (
       films.map((film, key) => <Film key={key} film={film} />)
     )
