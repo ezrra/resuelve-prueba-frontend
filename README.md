@@ -26,7 +26,7 @@ Sigue los siguientes puntos para la ejecución y mantenimiento del proyecto.
 
 ### Ejecutar modo desarrollo la aplicación
 
-`$ yarn start`
+`$ yarn dev`
 
 ### Ejecutar pruebas
 
@@ -35,3 +35,7 @@ Sigue los siguientes puntos para la ejecución y mantenimiento del proyecto.
 ### Crear archivos para producción
 
 `$ yarn build`
+
+### Ejecutar modo servidor
+
+`$ yarn start`
